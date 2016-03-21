@@ -1,0 +1,399 @@
+com.material.mylibrary.ui.AVLoadingIndicatorView -> com.material.mylibrary.ui.AVLoadingIndicatorView:
+    int mIndicatorId -> a
+    int mIndicatorColor -> b
+    android.graphics.Paint mPaint -> c
+    com.material.mylibrary.ui.indicator.BaseIndicatorController mIndicatorController -> d
+    boolean mHasAnimation -> e
+    void <init>(android.content.Context) -> <init>
+    void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    void <init>(android.content.Context,android.util.AttributeSet,int) -> <init>
+    void <init>(android.content.Context,android.util.AttributeSet,int,int) -> <init>
+    void init(android.util.AttributeSet,int) -> a
+    void applyIndicator() -> b
+    void onMeasure(int,int) -> onMeasure
+    int measureDimension(int,int) -> a
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void drawIndicator(android.graphics.Canvas) -> a
+    void applyAnimation() -> a
+    int dp2px(int) -> a
+com.material.mylibrary.ui.JellyView -> com.material.mylibrary.ui.JellyView:
+    android.graphics.Path path -> a
+    android.graphics.Paint paint -> b
+    int minimumHeight -> c
+    int jellyHeight -> d
+    void <init>(android.content.Context) -> <init>
+    void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    void <init>(android.content.Context,android.util.AttributeSet,int) -> <init>
+    void <init>(android.content.Context,android.util.AttributeSet,int,int) -> <init>
+    void init() -> a
+    void setJellyColor(int) -> setJellyColor
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void setMinimumHeight(int) -> setMinimumHeight
+    void setJellyHeight(int) -> setJellyHeight
+    int getMinimumHeight() -> getMinimumHeight
+    int getJellyHeight() -> getJellyHeight
+com.material.mylibrary.ui.indicator.BallBeatIndicator -> com.material.mylibrary.ui.indicator.a:
+    float[] scaleFloats -> b
+    int[] alphas -> a
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+    float[] access$000(com.material.mylibrary.ui.indicator.BallBeatIndicator) -> a
+com.material.mylibrary.ui.indicator.BallBeatIndicator$1 -> com.material.mylibrary.ui.indicator.b:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallBeatIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallBeatIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallBeatIndicator$2 -> com.material.mylibrary.ui.indicator.c:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallBeatIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallBeatIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallClipRotateIndicator -> com.material.mylibrary.ui.indicator.d:
+    float scaleFloat -> a
+    float degrees -> b
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.BallClipRotateIndicator$1 -> com.material.mylibrary.ui.indicator.e:
+    com.material.mylibrary.ui.indicator.BallClipRotateIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.BallClipRotateIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallClipRotateIndicator$2 -> com.material.mylibrary.ui.indicator.f:
+    com.material.mylibrary.ui.indicator.BallClipRotateIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.BallClipRotateIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallClipRotateMultipleIndicator -> com.material.mylibrary.ui.indicator.g:
+    float scaleFloat -> a
+    float degrees -> b
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.BallClipRotateMultipleIndicator$1 -> com.material.mylibrary.ui.indicator.h:
+    com.material.mylibrary.ui.indicator.BallClipRotateMultipleIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.BallClipRotateMultipleIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallClipRotateMultipleIndicator$2 -> com.material.mylibrary.ui.indicator.i:
+    com.material.mylibrary.ui.indicator.BallClipRotateMultipleIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.BallClipRotateMultipleIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallClipRotatePulseIndicator -> com.material.mylibrary.ui.indicator.j:
+    float scaleFloat1 -> a
+    float scaleFloat2 -> b
+    float degrees -> c
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.BallClipRotatePulseIndicator$1 -> com.material.mylibrary.ui.indicator.k:
+    com.material.mylibrary.ui.indicator.BallClipRotatePulseIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.BallClipRotatePulseIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallClipRotatePulseIndicator$2 -> com.material.mylibrary.ui.indicator.l:
+    com.material.mylibrary.ui.indicator.BallClipRotatePulseIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.BallClipRotatePulseIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallClipRotatePulseIndicator$3 -> com.material.mylibrary.ui.indicator.m:
+    com.material.mylibrary.ui.indicator.BallClipRotatePulseIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.BallClipRotatePulseIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallGridBeatIndicator -> com.material.mylibrary.ui.indicator.n:
+    int[] alphas -> a
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.BallGridBeatIndicator$1 -> com.material.mylibrary.ui.indicator.o:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallGridBeatIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallGridBeatIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallGridPulseIndicator -> com.material.mylibrary.ui.indicator.p:
+    int[] alphas -> a
+    float[] scaleFloats -> b
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.BallGridPulseIndicator$1 -> com.material.mylibrary.ui.indicator.q:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallGridPulseIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallGridPulseIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallGridPulseIndicator$2 -> com.material.mylibrary.ui.indicator.r:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallGridPulseIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallGridPulseIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallPulseIndicator -> com.material.mylibrary.ui.indicator.s:
+    float[] scaleFloats -> a
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+    float[] access$000(com.material.mylibrary.ui.indicator.BallPulseIndicator) -> a
+com.material.mylibrary.ui.indicator.BallPulseIndicator$1 -> com.material.mylibrary.ui.indicator.t:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallPulseIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallPulseIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallPulseRiseIndicator -> com.material.mylibrary.ui.indicator.u:
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.BallPulseSyncIndicator -> com.material.mylibrary.ui.indicator.v:
+    float[] translateYFloats -> a
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.BallPulseSyncIndicator$1 -> com.material.mylibrary.ui.indicator.w:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallPulseSyncIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallPulseSyncIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallRotateIndicator -> com.material.mylibrary.ui.indicator.x:
+    float scaleFloat -> a
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.BallRotateIndicator$1 -> com.material.mylibrary.ui.indicator.y:
+    com.material.mylibrary.ui.indicator.BallRotateIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.BallRotateIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallScaleIndicator -> com.material.mylibrary.ui.indicator.z:
+    float scale -> a
+    int alpha -> b
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.BallScaleIndicator$1 -> com.material.mylibrary.ui.indicator.aa:
+    com.material.mylibrary.ui.indicator.BallScaleIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.BallScaleIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallScaleIndicator$2 -> com.material.mylibrary.ui.indicator.ab:
+    com.material.mylibrary.ui.indicator.BallScaleIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.BallScaleIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallScaleMultipleIndicator -> com.material.mylibrary.ui.indicator.ac:
+    float[] scaleFloats -> a
+    int[] alphaInts -> b
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.BallScaleMultipleIndicator$1 -> com.material.mylibrary.ui.indicator.ad:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallScaleMultipleIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallScaleMultipleIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallScaleMultipleIndicator$2 -> com.material.mylibrary.ui.indicator.ae:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallScaleMultipleIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallScaleMultipleIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallScaleRippleIndicator -> com.material.mylibrary.ui.indicator.af:
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.BallScaleRippleIndicator$1 -> com.material.mylibrary.ui.indicator.ag:
+    com.material.mylibrary.ui.indicator.BallScaleRippleIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.BallScaleRippleIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallScaleRippleIndicator$2 -> com.material.mylibrary.ui.indicator.ah:
+    com.material.mylibrary.ui.indicator.BallScaleRippleIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.BallScaleRippleIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallScaleRippleMultipleIndicator -> com.material.mylibrary.ui.indicator.ai:
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.BallScaleRippleMultipleIndicator$1 -> com.material.mylibrary.ui.indicator.aj:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallScaleRippleMultipleIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallScaleRippleMultipleIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallScaleRippleMultipleIndicator$2 -> com.material.mylibrary.ui.indicator.ak:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallScaleRippleMultipleIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallScaleRippleMultipleIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallSpinFadeLoaderIndicator -> com.material.mylibrary.ui.indicator.al:
+    float[] scaleFloats -> a
+    int[] alphas -> b
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    com.material.mylibrary.ui.indicator.BallSpinFadeLoaderIndicator$Point circleAt(int,int,float,double) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.BallSpinFadeLoaderIndicator$1 -> com.material.mylibrary.ui.indicator.am:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallSpinFadeLoaderIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallSpinFadeLoaderIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallSpinFadeLoaderIndicator$2 -> com.material.mylibrary.ui.indicator.an:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallSpinFadeLoaderIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallSpinFadeLoaderIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallSpinFadeLoaderIndicator$Point -> com.material.mylibrary.ui.indicator.ao:
+    float x -> a
+    float y -> b
+    com.material.mylibrary.ui.indicator.BallSpinFadeLoaderIndicator this$0 -> c
+    void <init>(com.material.mylibrary.ui.indicator.BallSpinFadeLoaderIndicator,float,float) -> <init>
+com.material.mylibrary.ui.indicator.BallTrianglePathIndicator -> com.material.mylibrary.ui.indicator.ap:
+    float[] translateX -> a
+    float[] translateY -> b
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.BallTrianglePathIndicator$1 -> com.material.mylibrary.ui.indicator.aq:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallTrianglePathIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallTrianglePathIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallTrianglePathIndicator$2 -> com.material.mylibrary.ui.indicator.ar:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallTrianglePathIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallTrianglePathIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallZigZagDeflectIndicator -> com.material.mylibrary.ui.indicator.as:
+    void <init>() -> <init>
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.BallZigZagDeflectIndicator$1 -> com.material.mylibrary.ui.indicator.at:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallZigZagDeflectIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallZigZagDeflectIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallZigZagDeflectIndicator$2 -> com.material.mylibrary.ui.indicator.au:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallZigZagDeflectIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallZigZagDeflectIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallZigZagIndicator -> com.material.mylibrary.ui.indicator.av:
+    float[] translateX -> a
+    float[] translateY -> b
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.BallZigZagIndicator$1 -> com.material.mylibrary.ui.indicator.aw:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallZigZagIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallZigZagIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BallZigZagIndicator$2 -> com.material.mylibrary.ui.indicator.ax:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.BallZigZagIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.BallZigZagIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.BaseIndicatorController -> com.material.mylibrary.ui.indicator.ay:
+    android.view.View mTarget -> a
+    void <init>() -> <init>
+    void setTarget(android.view.View) -> a
+    android.view.View getTarget() -> b
+    int getWidth() -> c
+    int getHeight() -> d
+    void postInvalidate() -> e
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.CubeTransitionIndicator -> com.material.mylibrary.ui.indicator.az:
+    float[] translateX -> a
+    float[] translateY -> b
+    float degrees -> c
+    float scaleFloat -> d
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.CubeTransitionIndicator$1 -> com.material.mylibrary.ui.indicator.ba:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.CubeTransitionIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.CubeTransitionIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.CubeTransitionIndicator$2 -> com.material.mylibrary.ui.indicator.bb:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.CubeTransitionIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.CubeTransitionIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.CubeTransitionIndicator$3 -> com.material.mylibrary.ui.indicator.bc:
+    com.material.mylibrary.ui.indicator.CubeTransitionIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.CubeTransitionIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.CubeTransitionIndicator$4 -> com.material.mylibrary.ui.indicator.bd:
+    com.material.mylibrary.ui.indicator.CubeTransitionIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.CubeTransitionIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.LineScaleIndicator -> com.material.mylibrary.ui.indicator.be:
+    float[] scaleYFloats -> a
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.LineScaleIndicator$1 -> com.material.mylibrary.ui.indicator.bf:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.LineScaleIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.LineScaleIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.LineScalePartyIndicator -> com.material.mylibrary.ui.indicator.bg:
+    float[] scaleFloats -> a
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.LineScalePartyIndicator$1 -> com.material.mylibrary.ui.indicator.bh:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.LineScalePartyIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.LineScalePartyIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.LineScalePulseOutIndicator -> com.material.mylibrary.ui.indicator.bi:
+    void <init>() -> <init>
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.LineScalePulseOutIndicator$1 -> com.material.mylibrary.ui.indicator.bj:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.LineScalePulseOutIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.LineScalePulseOutIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.LineScalePulseOutRapidIndicator -> com.material.mylibrary.ui.indicator.bk:
+    void <init>() -> <init>
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.LineScalePulseOutRapidIndicator$1 -> com.material.mylibrary.ui.indicator.bl:
+    int val$index -> a
+    com.material.mylibrary.ui.indicator.LineScalePulseOutRapidIndicator this$0 -> b
+    void <init>(com.material.mylibrary.ui.indicator.LineScalePulseOutRapidIndicator,int) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.LineSpinFadeLoaderIndicator -> com.material.mylibrary.ui.indicator.bm:
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+com.material.mylibrary.ui.indicator.PacmanIndicator -> com.material.mylibrary.ui.indicator.bn:
+    float translateX -> a
+    int alpha -> b
+    float degrees1 -> c
+    float degrees2 -> d
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void drawPacman(android.graphics.Canvas,android.graphics.Paint) -> b
+    void drawCircle(android.graphics.Canvas,android.graphics.Paint) -> c
+    void createAnimation() -> a
+    float access$002(com.material.mylibrary.ui.indicator.PacmanIndicator,float) -> a
+    int access$102(com.material.mylibrary.ui.indicator.PacmanIndicator,int) -> a
+    float access$202(com.material.mylibrary.ui.indicator.PacmanIndicator,float) -> b
+    float access$302(com.material.mylibrary.ui.indicator.PacmanIndicator,float) -> c
+com.material.mylibrary.ui.indicator.PacmanIndicator$1 -> com.material.mylibrary.ui.indicator.bo:
+    com.material.mylibrary.ui.indicator.PacmanIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.PacmanIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.PacmanIndicator$2 -> com.material.mylibrary.ui.indicator.bp:
+    com.material.mylibrary.ui.indicator.PacmanIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.PacmanIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.PacmanIndicator$3 -> com.material.mylibrary.ui.indicator.bq:
+    com.material.mylibrary.ui.indicator.PacmanIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.PacmanIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.PacmanIndicator$4 -> com.material.mylibrary.ui.indicator.br:
+    com.material.mylibrary.ui.indicator.PacmanIndicator this$0 -> a
+    void <init>(com.material.mylibrary.ui.indicator.PacmanIndicator) -> <init>
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> onAnimationUpdate
+com.material.mylibrary.ui.indicator.SemiCircleSpinIndicator -> com.material.mylibrary.ui.indicator.bs:
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.SquareSpinIndicator -> com.material.mylibrary.ui.indicator.bt:
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a
+com.material.mylibrary.ui.indicator.TriangleSkewSpinIndicator -> com.material.mylibrary.ui.indicator.bu:
+    void <init>() -> <init>
+    void draw(android.graphics.Canvas,android.graphics.Paint) -> a
+    void createAnimation() -> a

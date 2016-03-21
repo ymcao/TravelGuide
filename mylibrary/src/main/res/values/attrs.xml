@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="NumberPicker">
+        <attr name="normalTextColor" format="color" />
+        <attr name="normalTextSize" format="dimension" />
+        <attr name="selecredTextColor" format="color" />
+        <attr name="selecredTextSize" format="dimension" />
+        <attr name="unitHight" format="dimension" />
+        <attr name="itemNumber" format="integer"/>
+        <attr name="lineColor" format="color" />
+        <attr name="maskHight" format="dimension"/>
+        <attr name="noEmpty" format="boolean"/>
+        <attr name="isEnable" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="RectProgressView">
+        <!-- 初始颜色 -->
+        <attr name="initColor" format="color"></attr>
+        <!--进度颜色-->
+        <attr name="progressColor" format="color"></attr>
+        <!--边框颜色-->
+        <attr name="borderColor" format="color"></attr>
+        <!--边框宽度-->
+        <attr name="borderWidth_1" format="dimension"></attr>
+        <!--文本颜色-->
+        <attr name="rtextColor" format="color"></attr>
+        <!--文本大小-->
+        <attr name="rtextSize" format="dimension"></attr>
+        <!--文本内容-->
+        <attr name="text" format="string"></attr>
+        <!--进度-->
+        <attr name="progress" format="integer"></attr>
+        <!--最大值-->
+        <attr name="rmax" format="integer"></attr>
+        <!--圆角大小-->
+        <attr name="radius" format="dimension"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="JellyRefreshLayout">
+        <attr name="android:text" />
+        <attr name="android:textColor" />
+        <attr name="jellyColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="QuantityView">
+        <attr name="qv_addButtonBackground" format="color" />
+        <attr name="qv_addButtonText" format="string" />
+        <attr name="qv_addButtonTextColor" format="color" />
+        <attr name="qv_removeButtonBackground" format="color" />
+        <attr name="qv_removeButtonText" format="string" />
+        <attr name="qv_removeButtonTextColor" format="color" />
+        <attr name="qv_quantityBackground" format="color" />
+        <attr name="qv_quantityTextColor" format="color" />
+        <attr name="qv_quantity" format="integer" />
+        <attr name="qv_quantityPadding" format="dimension" />
+        <attr name="qv_maxQuantity" format="integer" />
+        <attr name="qv_minQuantity" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundPin">
+        <attr name="roundColor" format="color"/>
+        <attr name="roundProgressColor" format="color"/>
+        <attr name="roundWidth" format="dimension" />
+        <attr name="roundTextColor" format="color" />
+        <attr name="roundTextSize" format="dimension" />
+        <attr name="roundMax" format="integer" />
+        <!--<attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>-->
+    </declare-styleable>
+    <declare-styleable name="AVLoadingIndicatorView">
+        <attr name="indicator">
+            <flag name="BallPulse" value="0"/>
+            <flag name="BallGridPulse" value="1"/>
+            <flag name="BallClipRotate" value="2"/>
+            <flag name="BallClipRotatePulse" value="3"/>
+            <flag name="SquareSpin" value="4"/>
+            <flag name="BallClipRotateMultiple" value="5"/>
+            <flag name="BallPulseRise" value="6"/>
+            <flag name="BallRotate" value="7"/>
+            <flag name="CubeTransition" value="8"/>
+            <flag name="BallZigZag" value="9"/>
+            <flag name="BallZigZagDeflect" value="10"/>
+            <flag name="BallTrianglePath" value="11"/>
+            <flag name="BallScale" value="12"/>
+            <flag name="LineScale" value="13"/>
+            <flag name="LineScaleParty" value="14"/>
+            <flag name="BallScaleMultiple" value="15"/>
+            <flag name="BallPulseSync" value="16"/>
+            <flag name="BallBeat" value="17"/>
+            <flag name="LineScalePulseOut" value="18"/>
+            <flag name="LineScalePulseOutRapid" value="19"/>
+            <flag name="BallScaleRipple" value="20"/>
+            <flag name="BallScaleRippleMultiple" value="21"/>
+            <flag name="BallSpinFadeLoader" value="22"/>
+            <flag name="LineSpinFadeLoader" value="23"/>
+            <flag name="TriangleSkewSpin" value="24"/>
+            <flag name="Pacman" value="25"/>
+            <flag name="BallGridBeat" value="26"/>
+            <flag name="SemiCircleSpin" value="27"/>
+        </attr>
+        <attr name="indicator_color" format="color"/>
+    </declare-styleable>
+</resources>

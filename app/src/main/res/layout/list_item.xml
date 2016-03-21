@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="12dp"
+    app:cardCornerRadius="8dp">
+
+
+    <RelativeLayout
+        android:id="@+id/linerlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/trav_head"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/user_head" />
+
+        <LinearLayout
+            android:id="@+id/descLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/trav_head"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/trav_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:text="泰国芭提雅、清迈、曼谷十天之旅"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/trav_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:maxLines="6"
+                android:text="萨拜翼酒店(Sabai Wing)>东芭乐园>芭堤雅水上市场>蒂芬尼人妖秀>Big C>可兰岛"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/descLayout"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/trav_head"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/trav_likenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_likes"
+                android:gravity="center_vertical"
+                android:text="99"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/trav_commentnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@drawable/ic_comments"
+                android:gravity="center_vertical"
+                android:text="99"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

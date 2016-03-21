@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.material.mylibrary.ui.JellyRefreshLayout
+        android:id="@+id/jellyRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:text="@string/loading"
+        android:textColor="@android:color/white"
+        app:jellyColor="#00be9c">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/itemLists"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </com.material.mylibrary.ui.JellyRefreshLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/toTopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="0dp"
+        android:src="@drawable/icon_arrow"
+        app:backgroundTint="#FF00BE9C"
+        app:rippleColor="#FFBBBBBB"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        app:elevation="10dp"
+        app:pressedTranslationZ="10dp"/>
+</RelativeLayout>

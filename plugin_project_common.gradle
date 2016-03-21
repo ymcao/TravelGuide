@@ -1,0 +1,58 @@
+buildscript {
+    repositories {
+        mavenCentral()
+//        jcenter()
+    }
+    dependencies {
+       // classpath 'net.sf.proguard:proguard-gradle:5.2.1'
+    }
+}
+
+project.ext{
+     customId='20151116'
+     sdkDir=project.properties['sdk.dir']
+}
+
+task init<<{
+    if (!new File(project.rootDir,'/bundle-output').exists()){
+        new File(project.rootDir,'/bundle-output').mkdirs()
+    }
+}
+
+task archivePack(type:Zip,dependsOn:'init'){
+    //inputs.file "$rootDir/bundle-output/demo-pack.zip"
+    //outputs.file "$rootDir/bundle-output/demo-pack-reload.zip"
+    FileTree tree=fileTree(new File(rootDir,'bundle-output')).include('*.so')
+    /*解压ZIP文件*/
+    from zipTree("$rootDir/bundle-output/demo-pack.zip"), {
+        //exclude('**/META-INF/*.SF')
+        //exclude('**/META-INF/*.RSA')
+    }
+    /*文件移进入ZIP包得demo-pack/resource/文件目录下面*/
+    into 'demo-pack/resource/',{
+        from tree
+    }
+    //
+
+    tree.each {
+        File file-> println file.getName()
+    }
+    //重新生成ZIP包
+    destinationDir file("$rootDir/bundle-output/")
+    archiveName 'demo-pack-reload.zip'
+}
+
+
+
+task copyFile(type:Copy){
+
+        from '/Users/caoyamin/Documents/mac_workspace/TravelGuide/fromdir'
+        into '/Users/caoyamin/Documents/mac_workspace/TravelGuide/intodir'
+}
+task compileApk {
+    doLast {
+        //assembleRelease
+        //println   sdkDir
+        println   'Id:'+customId
+    }
+}

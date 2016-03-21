@@ -1,0 +1,165 @@
+
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.0.0-beta5'
+        classpath 'me.tatarka:gradle-retrolambda:3.1.0'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+//apply from: '../plugin_project_common.gradle'
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '23.0.2'
+
+    defaultConfig {
+        applicationId "com.material.travel"
+        minSdkVersion 16
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+        // dex突破65535的限制
+        multiDexEnabled true
+        // 默认是umeng的渠道
+        manifestPlaceholders = [CUSTOM_CHANNEL_VALUE: "umeng"]
+        ndk {
+            moduleName "guideLib"
+            ldLibs "log"
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+        }
+    }
+    signingConfigs {
+        //gradle assembleRelease
+        debug {
+            // No debug config
+        }
+
+        release {
+            storeFile file("studio.keystore")
+            storePassword "123456"
+            keyAlias "stone"
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 显示Log
+            //buildConfigField "boolean", "LOG_DEBUG", "true"
+            //versionNameSuffix "-debug"
+            zipAlignEnabled false
+            shrinkResources false
+            minifyEnabled false
+
+        }
+        release {
+            minifyEnabled true //开启混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            //buildConfigField "boolean", "LOG_DEBUG", "false"
+            zipAlignEnabled true
+            //移除无用的resource文件
+            // shrinkResources true
+             /*applicationVariants.all { variant ->
+                 variant.outputs.each { output ->
+                     def outputFile = output.outputFile
+                     if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                         *_${variant.productFlavors[0].name}
+                         def fileName = "travel_guide_v${defaultConfig.versionName}_${releaseTime()}.apk"
+                         output.outputFile = new File(outputFile.parent, fileName)
+                     }
+                 }
+             }*/
+        }
+    }
+
+    /*productFlavors {
+        xiaomi {}
+        _360 {}
+        baidu {}
+        wandoujia {}
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [CUSTOM_CHANNEL_VALUE: name]
+    }*/
+
+    //这个是解决lint报错的代码
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    retrolambdaConfig 'net.orfjackal.retrolambda:retrolambda:2.0.2'
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:recyclerview-v7:22.2.0'
+    compile 'com.android.support:cardview-v7:22.2.0'
+    compile 'com.android.support:design:22.2.0'
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+    compile 'com.squareup.retrofit:adapter-rxjava:2.0.0-beta2'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+    compile 'com.nineoldandroids:library:2.4.0'
+    //debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3'
+    //releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3'
+    //if (isTest) {
+        testCompile 'junit:junit:4.12'
+        testCompile "org.assertj:assertj-core:1.7.0"
+        testCompile('org.robolectric:robolectric:3.0-rc3') {
+            exclude group: 'commons-logging', module: 'commons-logging'
+            exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+        }
+    //}
+    compile project(':mylibrary')
+}
+
+allprojects {
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+}
+
+//task nativeLibsToJar(type: Zip, description: "create a jar archive of the native libs") {
+    //destinationDir file("$projectDir/libs")
+    //baseName "Native_Libs2"
+    //extension "jar"
+    //from fileTree(dir: "libs", include: "**/*.so")
+    //into "lib"
+//}
+
+//tasks.withType(JavaCompile) {
+   // compileTask -> compileTask.dependsOn(nativeLibsToJar)
+//}
+
+/*afterEvaluate {
+    tasks.matching {
+        it.name.startsWith('dex')
+    }.each { dx ->
+        if (dx.additionalParameters == null) {
+            dx.additionalParameters = []
+        }
+        dx.additionalParameters += '--multi-dex'
+        dx.additionalParameters += "--main-dex-list=$projectDir/app/mapping.txt".toString()
+    }
+}*/
+// ./apkpatch.sh  -f travel_guide_v1.0_2015-11-19_02.apk -t travel_guide_v1.0_2015-11-19_01.apk -o patch -n out.apatch -k ../../app/studio.keystore  -p 123456 -a stone -e 123456
+// ./apkpatch.sh  -m out.apatch -o out -n out.apatch -k ../../app/studio.keystore   -p 123456 -a stone -e 123456
